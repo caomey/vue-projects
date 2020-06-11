@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://at.alicdn.com/t/font_1854445_xpzv6p1d9zc.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcdn.net/ajax/libs/github-markdown-css/4.0.0/github-markdown.css"
+    />
+    <title>vue-memo</title>
+  </head>
+  <body>
+    <!-- <canvas id="q"></canvas> -->
+    <div id="app"></div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </body>
+
+  <script>
+    const s = window.screen;
+    const w = (q.width = s.width);
+    const h = (q.height = s.height);
+    const ctx = q.getContext("2d");
+    ctx.font = "Bold 20px Verdana";
+    const p = Array(Math.floor(w / 100) + 1).fill(0);
+
+    const random = (items) => items[Math.floor(Math.random() * items.length)];
+
+    const hex = "笔记,工作,生活,学习".split(",");
+    // serInterval 执行后h值不再更新，放大缩小屏幕文字比例会改变
+    setInterval(() => {
+      ctx.fillStyle = "rgba(255,255,255,.1)"; //背景
+      ctx.fillRect(0, 0, w, h);
+      ctx.fillStyle = "#888";
+      p.map((v, i) => {
+        ctx.fillText(random(hex), i * 100, v);
+        p[i] = v >= h || v > 50 + 10000 * Math.random() ? 0 : v + 100;
+      });
+    }, 1000 / 5);
+  </script>
+  <style></style>
+</html>

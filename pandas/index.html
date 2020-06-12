@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pandas</title>
+    <style id="style"></style>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-flow: row;
+      height: 100vh;
+    }
+    #codewraper {
+      position: relative;
+    }
+    #code {
+      overflow: hidden;
+      height: 100%;
+    }
+    #preview {
+      display: flex;
+    }
+    .pandas {
+      position: absolute;
+      height: 600px;
+      width: 600px;
+    }
+    .speed {
+      position: absolute;
+      width: 50px;
+      height: 150px;
+      margin: 10px 10px;
+      top: 0;
+      right: 0;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+    button {
+      width: 50px;
+      height: 30px;
+    }
+    @media screen and (min-width: 900px) {
+      #codewraper,
+      #preview {
+        width: 50%;
+        align-items: center;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      body {
+        flex-flow: column;
+      }
+      #codewraper,
+      #preview {
+        height: 50%;
+      }
+      .pandas {
+        transform: translate(-25%, -20%) scale(0.5);
+      }
+    }
+  </style>
+  <body>
+    <!-- 展示css源码 -->
+    <div id="codewraper">
+      <pre id="code"></pre>
+      <div class="speed">
+        <button class="fast">快速</button>
+        <button class="normal">正常</button>
+        <button class="slow">慢速</button>
+        <button class="pause">暂停</button>
+      </div>
+    </div>
+    <!-- 展示css效果 -->
+    <div id="preview">
+      <div class="pandas">
+        <div class="leftear">
+          <div class="smallcircle"></div>
+        </div>
+        <div class="rightear">
+          <div class="smallcircle"></div>
+        </div>
+        <div class="head">
+          <div class="lefteye">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+          </div>
+          <div class="righteye">
+            <div class="circle1"></div>
+            <div class="circle2"></div>
+            <div class="circle3"></div>
+          </div>
+          <div class="nose"></div>
+          <div class="mouseleft"></div>
+          <div class="mouseright"></div>
+        </div>
+        <div class="body"></div>
+        <div class="lefthand"></div>
+        <div class="righthand"></div>
+        <div class="leftfoot">
+          <div class="bigcircle"></div>
+          <div class="claw1"></div>
+          <div class="claw2"></div>
+          <div class="claw3"></div>
+        </div>
+        <div class="rightfoot">
+          <div class="bigcircle"></div>
+          <div class="claw1"></div>
+          <div class="claw2"></div>
+          <div class="claw3"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>

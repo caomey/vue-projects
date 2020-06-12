@@ -64,3 +64,13 @@ word-wrap: break-word;
 overflow-y: scroll;
 ```
 
+## right 失效
+
+因为同时设置left  和 right的话，left的权重比较高，此时right不生效。所以把left设置为initial，恢复为默认的样式
+
+
+
+## 书写问题
+
+1. body{} 写成 .body{}
+2. 多标签用逗号隔开  .div1,.div2{}

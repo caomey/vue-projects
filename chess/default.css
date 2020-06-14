@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  background: #2f3542;
+}
+.questionWrapper {
+  height: 40%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+}
+
+.chessWrapper {
+  flex-flow: column;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: #fff;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#chess {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.actions {
+  margin: 10px 0;
+  display: flex;
+}
+.actions div {
+  margin: 0 10px;
+  width: 50px;
+  height: 25px;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: 0.4s;
+  text-align: center;
+  line-height: 20px;
+}
+.actions div:hover {
+  background-color: #fff;
+  color: black;
+}
+.wraper {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.left {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#question {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.left::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: rotate(135deg);
+  border-right: 3px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+  transition: 0.4s;
+}
+.right::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: rotate(-45deg);
+  border-right: 3px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+  transition: 0.4s;
+}
+.left:hover::before,
+.right:hover::after {
+  border-right: 3px solid rgba(255, 255, 255, 1);
+  border-bottom: 3px solid rgba(255, 255, 255, 1);
+}
+#chess div,
+#question div {
+  width: 12.5%;
+  height: 12.5%;
+  border: 1px solid #ccc;
+}
+
+.black {
+  background-color: black;
+}
+.white {
+  background-color: white;
+}

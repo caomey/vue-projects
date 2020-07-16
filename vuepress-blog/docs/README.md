@@ -4,7 +4,7 @@ heroImage: /IronMan.jpg
 heroText: 我的主页
 tagline: My homepage
 actionText: 我的博客 →
-actionLink: /guide/
+actionLink: /frontend/javascript/
 features:
   - title: 简洁至上
     details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

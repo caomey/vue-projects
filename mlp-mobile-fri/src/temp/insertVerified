@@ -1,0 +1,124 @@
+POST /release/xinghuo-code/mlp/ebus/mlp/mobile/task/insertVerified HTTP/1.1
+Host: service-foi3os32-1253410361.ap-guangzhou.apigateway.myqcloud.com
+Connection: keep-alive
+Content-Length: 4874
+Source: source
+Authorization: hmac id="AKID9w3aNB0v2Nao1TsO6RDCr1uTfn8cHHp5kH07", algorithm="hmac-sha1", headers="x-date source", signature="9zesA1YxIUWEE147LDdRwjBb53k="
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary4f0puQdcPrf5FY38
+Accept: */*
+User-Agent: Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Mobile Safari/537.36
+X-Date: Fri, 20 Mar 2020 01:05:23 GMT
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODQ2NjgyNjMsInVzZXJuYW1lIjoiaHRkd3Rlc3QwMSJ9.JLS8zHEJ8UFibgt3Yd29xArX0Cbc9UmMqeyDlL1BpZw
+Origin: https://msjwt.ga.sz.gov.cn
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Referer: https://msjwt.ga.sz.gov.cn/mlp-ui/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+
+
+photo3: (binary)
+taskButchVos: {
+    "insertList": [
+        {
+            "mphm": "1",
+            "ymphm": "远楼牌号1",
+            "buildsc": "俗称",
+            "buildCode": "1234567891234567891",
+            "content": "测试测试",
+            "dataType": 2,
+            "taskId": "15851296",
+            "list": [
+                {
+                    "fid": "15851296",
+                    "dataType": 3,
+                    "taskId": "15851258",
+                    "mphm": "一",
+                    "content": "",
+                    "buildsc": "",
+                    "id": 2,
+                    "operateType": 1,
+                    "hmMsg": ""
+                },
+                {
+                    "fid": "15851296",
+                    "dataType": 3,
+                    "taskId": "15851226",
+                    "mphm": "二",
+                    "content": "",
+                    "buildsc": "",
+                    "id": 2,
+                    "operateType": 1,
+                    "hmMsg": ""
+                }
+            ],
+            "id": 1,
+            "operateType": 1,
+            "checkSelectWord": ""
+        },
+        {
+            "mphm": "2",
+            "ymphm": "",
+            "buildsc": "",
+            "buildCode": "",
+            "content": "",
+            "dataType": 2,
+            "taskId": "15851231",
+            "list": [
+                {
+                    "fid": "15851231",
+                    "dataType": 3,
+                    "taskId": "15851289",
+                    "mphm": "一",
+                    "content": "",
+                    "buildsc": "",
+                    "id": 2,
+                    "operateType": 1,
+                    "hmMsg": ""
+                },
+                {
+                    "fid": "15851231",
+                    "dataType": 3,
+                    "taskId": "15851206",
+                    "mphm": "二",
+                    "content": "",
+                    "buildsc": "",
+                    "id": 2,
+                    "operateType": 1,
+                    "hmMsg": ""
+                }
+            ],
+            "id": 1,
+            "operateType": 1,
+            "checkSelectWord": ""
+        }
+    ],
+    "taskTemp": {
+        "addressName": "小区",
+        "ymphm": "原门牌号码1",
+        "mphm": "1",
+        "buildname": "测试小区名称",
+        "buildsc": "",
+        "buildcode": "",
+        "content": "测试备注",
+        "szjd": "南园街道",
+        "szsq": "东园社区",
+        "szxq": "罗湖区",
+        "roadName": "坂田三工业区",
+        "roadId": -1,
+        "mpggName": "大号门牌",
+        "mpgg": 1,
+        "ssfj": "福田分局",
+        "sspcs": "福田派出所",
+        "jwsq": "福田社区警务室",
+        "temporary": 0,
+        "addresstype": 1,
+        "dataType": 1,
+        "operateType": 1,
+        "x": "114.026661",
+        "y": "22.550507"
+    },
+    "userId": 43,
+    "roleId": 6
+}
+

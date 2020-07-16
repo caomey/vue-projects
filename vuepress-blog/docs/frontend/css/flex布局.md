@@ -35,7 +35,7 @@ flex-flow 相当于 flex-direction 和 flex-wrap两个属性
 前面记得加上：display:flex
 
 ```css
-flex-flow：row nowrap //(默认)
+flex-flow：row nowrap //(默认) 
 ```
 
 ### 4、justify-content属性：主轴方向上的对齐方式

@@ -4,6 +4,8 @@ npm（Node Package Manager）意思是 node 的包管理器，它是随着 NodeJ
 
 无论是在前端还是在前端开发中都会使用到 npm 包管理器。（前端框架开发react、Vue...，后台 node 开发）；
 
+可复用代码仓库，避免重复造轮子，共享劳动成果
+
 ## 2、安装
 
 去官网下载对应操作系统的 nodeJS，官网地址：https://nodejs.org/en/download/

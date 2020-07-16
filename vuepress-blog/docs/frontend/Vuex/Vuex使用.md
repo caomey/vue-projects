@@ -135,7 +135,7 @@ mapState中的状态修改必须要有mutation中的方法，也可以直接用t
 bug：Computed property "XXX" was assigned to but it has no setter
 
 1. 组件中v-model=“XXX”，而XXX是vuex state中的某个变量
-2. vuex中是单项流，v-model是vue中的双向绑定，但是在computed中只通过get获取参数值，没有set无法改变参数值
+2. vuex中是**单向流**，v-model是vue中的双向绑定，但是在computed中只通过get获取参数值，没有set无法改变参数值
 
 ```js
 computed: {

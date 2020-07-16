@@ -1,4 +1,4 @@
-# call / apply
+# call / apply/bind
 
 ## 作用
 
@@ -8,8 +8,9 @@
 
 **后面传参形式不同**
 
-call需要把实参按照形参的个数传进去
-apply 需要传一个arguments
+- call   的参数是直接放进去的，第二第三第 n 个参数全都用逗号分隔
+- apply  的所有参数都必须放在一个数组里面传进去
+- bind 返回是函数
 
 ## call
 
@@ -49,7 +50,26 @@ console.log(student);
 
 ```
 
-## 
-
 ## apply
+
+```js
+func.call(this, arg1, arg2);
+func.apply(this, [arg1, arg2])
+```
+
+
+
+## bind
+
+```js
+var bar = function(){
+console.log(this.x);
+}
+var foo = {
+x:3
+}
+bar(); // undefined
+var func = bar.bind(foo);
+func(); // 3
+```
 

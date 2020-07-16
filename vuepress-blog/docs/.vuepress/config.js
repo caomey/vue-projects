@@ -54,6 +54,7 @@ module.exports = {
     "vuepress-plugin-auto-sidebar": {
       nav: true,
     },
+    // 手机端缓存
     "@vuepress/pwa": {
       serviceWorker: true,
       updatePopup: {

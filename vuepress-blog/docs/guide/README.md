@@ -10,9 +10,9 @@
 
 ### 前端
 
-- [Javascript](vuepress-blog/frontend/javascript)
-- [html](vuepress-blog/frontend/html)
-- [css](vuepress-blog/frontend/css)
-- [vuepress](vuepress-blog/frontend/vuepress)
-- [vue](vuepress-blog/frontend/vue)
-- [vuex](vuepress-blog/frontend/Vuex)
+- [Javascript](/vuepress-blog/frontend/javascript)
+- [html](/vuepress-blog/frontend/html)
+- [css](/vuepress-blog/frontend/css)
+- [vuepress](/vuepress-blog/frontend/vuepress)
+- [vue](/vuepress-blog/frontend/vue)
+- [vuex](/vuepress-blog/frontend/Vuex)

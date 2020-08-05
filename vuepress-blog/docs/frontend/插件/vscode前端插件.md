@@ -24,7 +24,31 @@
 
 自动保存代码
 
-## prettier
+## prettier Now
 
-自动加分号
+格式化美化代码!!!
+
+## Bracket pair Colorizer
+
+给括号加颜色!!!!
+
+## Vue VSCode Snippets
+
+vb自动生成模板!!!
+
+## Live Server
+
+保存自动刷新网页!!!
+
+## Liver Sass Compiler
+
+实时编译scss文件,输出css文件
+
+## Material Theme
+
+主题
+
+
+
+
 

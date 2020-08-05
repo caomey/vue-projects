@@ -251,3 +251,50 @@ foo(baz) {
 
 
 上面代码中，bar和snaf都是Symbol值，导致第三方无法获取到它们，因此达到了私有方法和私有属性的效果。？？？？
+
+---
+
+# 总结
+
+class
+
+```js
+class HotelBooking {
+  constructor(name) {
+    this.WELCOME = "欢迎光临";  //私有属性
+    this.HOTEL_NAME = name;		// 传入属性
+    this.init();			//初始化
+  }
+  init() {
+    console.log(this.WELCOME + this.HOTEL_NAME); //使用私有属性
+  }
+  equiry(room_num) {  //传入参数
+    console.log("room " + room_num + " price has been told"); //使用参入参数
+  }
+  confirm(room_num) {
+    console.log("room " + room_num + " has been comfirmed");
+  }
+  cancel(room_num) {
+    console.log("room " + room_num + " booking has been canceled");
+  }
+}
+
+HotelBooking.prototype.closed = function () { //原型上扩展方法
+  console.log("酒店已打样");
+};
+
+var booking = new HotelBooking("富豪酒店");
+console.log(booking.equiry(2));
+console.log(booking.confirm(2));
+console.log(booking.cancel(2));
+console.log(booking.closed());
+
+out:
+欢迎光临富豪酒店
+room 2 price has been told
+room 2 has been comfirmed
+room 2 booking has been canceled
+酒店已打样
+
+```
+

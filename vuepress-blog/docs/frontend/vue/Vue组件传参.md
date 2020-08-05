@@ -1,7 +1,19 @@
-# Vue非父子组件间的传参
+# Vue组件间的传参(7种)
 
-1. 一种是两个组件是有一个共同父组件的兄弟关系组件
-2. 第二种是两个组件之间没有太大的关系, 甚至要像上追溯好几层才能找到共同的祖先组件.
+| 父子组件之间的传参 | 方向   |
+| ------------------ | ------ |
+| props和$emit       | 双向   |
+| $parent和$children | 双向   |
+| this.refs          | 下到上 |
+
+| 非子组件之间的传参 | 方向     |
+| ------------------ | -------- |
+| 事件总线bus        | 任意方向 |
+| $attrs和$listeners | 双向     |
+| provide和inject    | 上到下   |
+| **vuex**           | 任意方向 |
+
+
 
 ## 1. 兄弟关系数据传递
 
@@ -83,7 +95,7 @@
 </script>
 ```
 
-## 2. 发布订阅模式
+## 2. 发布订阅模式 this.bus.$emit/this.bus.$on
 
 用于解决平级组件或者跨级组件之间的通信,因为如果全部用父子组件通信,有的不是父子组件就很繁琐,所以我们利用一个公共的vue实例订阅和发布事件来达到不是父子组件间的通信
 
@@ -222,13 +234,59 @@
 </script>
 ```
 
+## 4.$listeners 和 $attrs
+
+```html
+			父组件
+
+<A>
+    <B :a="a" @test="test"></B>
+</A>
+data:{
+	a:111
+}
+test(val){ //孙组件传上来的方法
+	console.log(val)
+}
+			子组件
+
+<B> 
+    //中间层,attrs从上往下传参数,从下往上传事件
+    <C v-bind="$attrs" v-on="$listeners"></C>
+</B>
+
+			孙组件
+<C>
+</C>
+console.log(a) //父组件传下来的值
+props:[a]
+this.$emit('test',123)
+```
 
 
 
+## 5.provide 和 inject
 
 
 
+## 6.props/$emit
 
+父组件向子组件传参
 
+```js
+父组件中的children子组件
+<children :form-data="test"/>
+```
 
+: 等价v-bind:, from-data 为子组件中绑定的参数,test为父组件中传入的参数,
+
+form-data等价 formData 或者 formdata 不区分大小写
+
+```js
+:子组件参数/方法=传入的父组件参数/方法
+```
+
+## 7.$parent/$children
+
+## 8.Vuex
 

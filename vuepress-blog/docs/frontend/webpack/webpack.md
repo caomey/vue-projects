@@ -351,12 +351,20 @@ webpack-bundle-analyzer, 可视化展现分析包的大小
 
 
 
-## loader和plugins的区别
+## loader和plugins的区别!!!!!!
 
-1 .文档定义loader为在模块加载时的预处理文件，故loader运行在打包文件之前。
-2 . plugins的定义为处理loader无法处理的事物，例如loader只能在打包之前运行，但是plugins在整个编译周期都起作用。
+1 .文档定义loader为在模块加载时的**预处理文件**，故loader运行在打包文件之前。
+2 . plugins的定义为处理loader无法处理的事物，例如loader只能在打包之前运行，但是plugins在**整个编译周期都起作用**。
 
-**loader运行在打包文件之前,plugins在整个编译周期都起作用**
+**loader运行在打包文件之前,plugins在整个编译周期都起作用**!!!!!!
+
+
+
+---
+
+## [VUE中webpack配置](https://cli.vuejs.org/zh/guide/webpack.html)
+
+**vue.config.js**
 
 
 

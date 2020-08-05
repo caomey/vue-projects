@@ -96,9 +96,22 @@ npm i qs
 方法一：将对象序列化，多个对象之间用&拼接（拼接是由底层处理，无需手动操作）
 
 ```js
-qs.stringify()    转换成查询字符串
-let comments = {content: this.inputValue}
-let comValue = qs.stringify(comments)
+const qs = require("qs");
+let a = { content: 111, name: 222 };
+let b = "wd=mutation&rsv_spt=1&f=8&rsv_bp=1&rsv_idx=2&ie=utf-8";
+console.log(qs.stringify(a));
+console.log(qs.parse(b));
+
+out:
+content=111&name=222
+{
+  'wd': 'mutation',
+  rsv_spt: '1',
+  f: '8',
+  rsv_bp: '1',
+  rsv_idx: '2',
+  ie: 'utf-8'
+}
 ```
 
 
@@ -110,3 +123,26 @@ qs.parse() 转换成json对象
 let comValue = qs.parse(comments)
 ```
 
+## lodash
+
+## vue-page-stack
+
+页面缓存
+
+## mockjs
+
+模拟数据请求
+
+## less
+
+css预编译
+
+## echarts
+
+## element-ui
+
+
+
+## sheetJS-xlsx
+
+导入导出excel文件

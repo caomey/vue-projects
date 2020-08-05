@@ -257,6 +257,26 @@ Object.propertyIsEnumerable( ) 是否可以通过 for/in 循环看到属性
 Object.toLocaleString( ) 返回对象的本地字符串表示
 Object.toString( ) 定义一个对象的字符串表示
 Object.valueOf( ) 指定对象的原始值
+**Object.assign()**将被拷贝对象的自有属性 *浅拷贝*至目标对象中。
+
+**Object.keys(obj)** 查看对象的属性和方法
+
+```js
+Object.assign(targetObj, copyObj_1, ....,copyObj_n );
+var a = {
+  a: 1,
+};
+
+var b = {
+  a: 2,
+  b: 3,
+};
+
+Object.assign(a, b);
+console.log(a); //{ a: 2, b: 3 }
+```
+
+
 
 ## **RegExp 正则表达式对象**
 
@@ -287,7 +307,14 @@ fromCharCode( ) 从字符编码创建—个字符串
 indexOf( ) 返回一个子字符串在原始字符串中的索引值(查找顺序从左往右查找)。如果没
 有找到，则返回-1。
 lastIndexOf( ) 从后向前检索一个字符串
-localeCompare( ) 用本地特定的顺序来比较两个字符串
+**localeCompare( ) 用本地特定的顺序来比较两个字符串**
+
+```js
+let a = '啊'
+let b = '哦'
+a.localCompare(b,'zh')
+```
+
 match( ) 找到一个或多个正则表达式的匹配
 replace( ) 替换一个与正则表达式匹配的子串
 search( ) 检索与正则表达式相匹配的子串
@@ -312,6 +339,35 @@ console.log(s.charAt(1)); // e
 console.log(s.charCodeAt(1)); //101 
 console.log(s.replace(1, 2)); // test22
 
+```
+
+## formData
+
+```js
+const formData = new FormData();
+formData.append("name", "tom");
+```
+
+
+
+## 获取对象的原型方法
+
+```js
+function getFnNames(obj){ 
+    if(!obj) return;
+    //打印对象(本身和原型链上)所有函数的名字，包括不可枚举的
+    Object.getOwnPropertyNames(obj).forEach((key,index)=>{
+        let type = Object.prototype.toString.call(obj[key]);
+        if(type!=='[object Function]') return;
+        let str = obj[key].toString();
+        let result = str.match(/\(.*\)/);
+        console.log(key+result[0]);
+    });
+}
+ 
+let arr = new Array();
+ 
+getFnNames(arr.__proto__);
 ```
 
 

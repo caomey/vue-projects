@@ -18,11 +18,14 @@ npm（Node Package Manager）意思是 node 的包管理器，它是随着 NodeJ
 npm init -y
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> b768e5be55bf3008c75bd8be0c7db17bbf4591fa
+=======
+>>>>>>> 4421e6bd6efc0e415436f1b199c671c1e4b8e89f
 1. npm -v 查看 npm 的版本
 
    ```sh

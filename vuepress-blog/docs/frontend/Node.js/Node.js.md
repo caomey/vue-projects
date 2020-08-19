@@ -40,8 +40,6 @@ Node.js 是 c++编写开发的，_Node_.*js*是一个基于 Chrome V8 引擎的 
   node -e console.log(1);console.log(2)
   ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 导入和导出js
 
 es5
@@ -62,9 +60,6 @@ export const a = {}
 import {a} from './test.js'
 ```
 
-=======
-=======
->>>>>>> 4421e6bd6efc0e415436f1b199c671c1e4b8e89f
 ## js中引入其他js文件
 
 ### es5
@@ -93,9 +88,3 @@ export const n = {}
 import {n} from "./test.js"
 ```
 
-
-
-<<<<<<< HEAD
->>>>>>> b768e5be55bf3008c75bd8be0c7db17bbf4591fa
-=======
->>>>>>> 4421e6bd6efc0e415436f1b199c671c1e4b8e89f

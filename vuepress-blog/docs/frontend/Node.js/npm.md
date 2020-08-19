@@ -12,6 +12,14 @@ npm（Node Package Manager）意思是 node 的包管理器，它是随着 NodeJ
 
 ## 3、npm简单命令使用
 
+初始化package.json
+
+```js
+npm init -y
+```
+
+
+
 1. npm -v 查看 npm 的版本
 
    ```sh

@@ -20,7 +20,8 @@ module.exports = [
       { text: "codename", link: "/frontend/codename/" },
       { text: "UI", link: "/frontend/UI/" },
       { text: "算法题", link: "/frontend/算法题/" },
-      { text: "插件", link: "/frontend/插件/" },
+      { text: "Vscode", link: "/frontend/Vscode/" },
+      { text: "git", link: "/frontend/git/" },
     ],
   },
 ];

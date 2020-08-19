@@ -54,7 +54,7 @@ module.exports = {
     "vuepress-plugin-auto-sidebar": {
       nav: true,
     },
-    // 手机端缓存
+    // 手机端缓存,为什么有时不刷新呢
     "@vuepress/pwa": {
       serviceWorker: true,
       updatePopup: {

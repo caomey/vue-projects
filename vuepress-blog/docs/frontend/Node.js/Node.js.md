@@ -39,3 +39,24 @@ Node.js 是 c++编写开发的，_Node_.*js*是一个基于 Chrome V8 引擎的 
   ```node
   node -e console.log(1);console.log(2)
   ```
+
+导入和导出js
+
+es5
+
+```js
+//导出
+module.exports a = {} / exports.a = {}
+//导入
+var a = require('./test.js')
+```
+
+es6
+
+```js
+//导出
+export const a = {}
+//导入
+import {a} from './test.js'
+```
+

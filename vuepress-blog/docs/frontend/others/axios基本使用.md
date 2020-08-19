@@ -25,6 +25,14 @@ new Vue({
 
 #### 基本API
 
+**axios.get(url,params,config) 当aixos要使用configs时,封装axios时要使用扩展运算符**
+
+```js
+request.post(url,...options) //不使用扩展运算符,默认入参只有两个
+```
+
+
+
 ##### 1.  执行get请求，有两种方式
 
 ```jsx

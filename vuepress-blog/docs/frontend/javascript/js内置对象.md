@@ -276,6 +276,20 @@ Object.assign(a, b);
 console.log(a); //{ a: 2, b: 3 }
 ```
 
+## Object.prototype.tpString.call() 
+
+在`JavaScript`里使用`typeof`判断数据类型，只能区分**基本类型**，即：`number`、`string`、`undefined`、`boolean`、`object`。
+对于`null`、`array`、`function`、`object`来说，使用`typeof`都会统一返回`object`字符串。
+要想区分对象、数组、函数、单纯使用`typeof`是不行的。在JS中，可以通过`Object.prototype.toString`方法，判断某个对象之属于哪种内置类型。
+分为`null`、`string`、`boolean`、`number`、`undefined`、`array`、`function`、`object`、`date`、`math`。
+
+```js
+var a = 1234
+Object.prototype.tpString.call(a).indexof(Number) > -1 //判断数据类型,返回8为对应数据类型
+var a = new Number(1234)
+a instanceof Number  // 返回true,判断的类型必须是new出来的对象
+```
+
 
 
 ## **RegExp 正则表达式对象**

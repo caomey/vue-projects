@@ -17,7 +17,7 @@ git init //在本地生成.git文件夹，建立暂存区
 
 ```bash
 git add 文件名
-git add * // 提交当前目录所有的文件
+git add . // 提交当前目录所有的文件
 git commit -m "提交的描述"
 ```
 
@@ -71,7 +71,7 @@ git push -u origin marster
 ### 第二次提交
 
 ```bash
-git add *
+git add .
 git push
 ```
 
@@ -87,3 +87,14 @@ git clone
 git pull
 ```
 
+
+
+## 多人合作时git流程
+
+1. git add . 提交所有改动文件到暂存区
+
+2. git commit  -m "update" 添加文件更改备注
+
+3. git pull 拉取同事修改的代码,解决冲突
+
+4. git push 解决冲突后将代码提交带仓库

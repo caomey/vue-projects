@@ -1,4 +1,4 @@
-Vuex实例
+# Vuex实战
 
 ## state和mutation
 
@@ -212,25 +212,16 @@ export default {
 多个module调用
 
 ```js
-import { createNamespacedHelpers } from 'vuex'
-
-const { mapState, mapActions } = createNamespacedHelpers('some/nested/module')
-
-export default {
-  computed: {
-    // 在 `some/nested/module` 中查找
-    ...mapState({
-      a: state => state.a,
-      b: state => state.b
-    })
-  },
-  methods: {
-    // 在 `some/nested/module` 中查找
-    ...mapActions([
-      'foo',
-      'bar'
-    ])
-  }
+import {mapActions,mapState} from 'vuex'  // 引入mapActions,mapState方法
+import state from '../vuex/mudule_A/index'  //引入vuex中不同module中的state
+methods:{
+    ...mapActions("module_A",["someaction"]) //在前面加上对应的module名称即可(vuex中文件夹的名称)
+    ...mapMutation("module_A",["somemutation"])
+    ...mapState("module_A",["somestate"])
+}
+beforeCreate(){
+    //异步加载state数据
+    !this.$store.hasModule("module_A") && this.$store.registerModule("module_A",state)
 }
 ```
 

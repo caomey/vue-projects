@@ -271,19 +271,40 @@ this.$emit('test',123)
 
 ## 6.props/$emit
 
-父组件向子组件传参
+props自上而下传递参数,可以是字符串,数组,对象(方法),父=>子=>孙
 
 ```js
-父组件中的children子组件
-<children :form-data="test"/>
+<template :name="a" :Fun="foo"/> //方法也可以往下传!!!
+
+//底层接收
+props:{
+    name:{
+        type:String
+    },
+    Fun:{
+        type:Function
+    }
+}
 ```
 
-: 等价v-bind:, from-data 为子组件中绑定的参数,test为父组件中传入的参数,
+$emit 自下而上传递方法,孙=>子=>父
 
-form-data等价 formData 或者 formdata 不区分大小写
+自定义事件
 
 ```js
-:子组件参数/方法=传入的父组件参数/方法
+//子组件往上传
+methods:{
+    changeFatherData(){
+        this.$emit("custom",name)
+    }
+}
+//父组件接收,自定义事件方法名
+<father @custom="changeName"/>
+ methods:{
+    changeName(name){
+        ...
+    }
+}
 ```
 
 ## 7.$parent/$children

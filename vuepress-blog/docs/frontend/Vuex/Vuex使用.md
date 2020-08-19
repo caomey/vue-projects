@@ -128,7 +128,7 @@ computed: {
 },
 ```
 
-但是这些state中的状态还是需要一个个声明，而且很长，可以用mapstore来访问状态
+但是这些state中的状态还是需要一个个声明，而且很长，可以用mapState来访问状态
 
 mapState中的状态修改必须要有mutation中的方法，也可以直接用this.$store.state来修改
 

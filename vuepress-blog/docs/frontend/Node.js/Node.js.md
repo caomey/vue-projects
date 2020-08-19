@@ -40,6 +40,7 @@ Node.js 是 c++编写开发的，_Node_.*js*是一个基于 Chrome V8 引擎的 
   node -e console.log(1);console.log(2)
   ```
 
+<<<<<<< HEAD
 导入和导出js
 
 es5
@@ -60,3 +61,35 @@ export const a = {}
 import {a} from './test.js'
 ```
 
+=======
+## js中引入其他js文件
+
+### es5
+
+```js
+//导出
+module.exports = {}
+//导入
+var n = require('./test.js')
+```
+
+### es6
+
+需要先安装bable
+
+```js
+npm i bable-cli -g
+```
+
+
+
+```js
+//导出
+export const n = {}
+//导入
+import {n} from "./test.js"
+```
+
+
+
+>>>>>>> b768e5be55bf3008c75bd8be0c7db17bbf4591fa

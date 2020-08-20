@@ -22,6 +22,7 @@ module.exports = [
       { text: "算法题", link: "/frontend/算法题/" },
       { text: "Vscode", link: "/frontend/Vscode/" },
       { text: "git", link: "/frontend/git/" },
+      { text: "函数式编程", link: "/frontend/函数式编程/" },
     ],
   },
 ];
